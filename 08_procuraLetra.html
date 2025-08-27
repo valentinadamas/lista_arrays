@@ -9,13 +9,19 @@
     */
 
     //ENTRADA
-    const palavra = prompt(`Informe UMA palavra apenas:`).trim();
-    const soletrada = [];
+    const palavra = prompt("Infomre UMA palavra:");
+    const letra = prompt("Informe uma letra que você deseja encontrar nessa palavra:");
 
     //PROCESSAMENTO
 
-    soletrada.from(palavra)
+    let existe = palavra.indexOf(letra)
 
-    //SAÍDA
-
+    if (existe < 0) {
+        alert(`Essa letra não existe na palavra informada. Tente outra!`);
+    }
+    else if (existe >= 0) {
+        alert(`A primeira posição da letra na palavra é: ${existe + 1}`);
+    }
+    else
+        alert(`Erro!`)
 </script>

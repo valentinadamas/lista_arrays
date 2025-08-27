@@ -11,11 +11,34 @@
     */
 
     //ENTRADA
-
+   
+    const fruta1 = prompt(`Insira uma fruta:`);
+    const fruta2= prompt(`Insira uma fruta:`);
+    const fruta3= prompt(`Insira uma fruta:`);
+    const bebida1 = prompt(`Insira uma bebida:`);
+    const bebida2 = prompt(`Insira uma bebida:`);
+    const bebida3 = prompt(`Insira uma bebida:`);
+    const frutas = [];
+    const bebidas = [];
+    const lista = [];
 
     //PROCESSAMENTO
 
+    frutas.push(fruta1);
+    frutas.push(fruta2);
+    frutas.push(fruta3);
+    bebidas.push(bebida1);
+    bebidas.push(bebida2);
+    bebidas.push(bebida3);
+
+    lista.push(frutas);
+    lista.push(bebidas);
+
+    const final = frutas.concat(bebidas);
 
     //SAÍDA
 
+    alert(`As frutas a serem serão: ${frutas.join(", ")}`);
+    alert(`As bebidas a serem serão: ${bebidas.join(", ")}`);
+    document.write(`A lista de compras é ${final.join(", ")}`);
 </script>
