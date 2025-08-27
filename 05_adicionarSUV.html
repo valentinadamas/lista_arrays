@@ -9,11 +9,22 @@
     */
 
     //ENTRADA
-
+    const carro = prompt(`Qual carro você deseja adicionar na lista("Creta", "Tracker", "Compass", "Kicks")?`).trim().toLowerCase();
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
 
     //PROCESSAMENTO
-
+    if (carro === "kicks")
+    carrosSUV.push("Kicks");
+    else if (carro === "creta")
+    carrosSUV.push("Creta");
+    else if (carro === "tracker")
+    carrosSUV.push("Tracker");
+    else if (carro === "compass")
+    carrosSUV.push("Compass");
+    else
+    alert(`Insira um dos carros listados.`)
 
     //SAÍDA
 
+    alert(`A lista antiga era: Tiggo, Sportage, Tucson, EcoSport. A lista com o item que você adicionou ficou: ${carrosSUV.join(", ")}`)
 </script>
