@@ -7,17 +7,66 @@
     let cassosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
     let carrosHatch = ["308", "Focus", "i30"];
     
-    Peça para o usuário informar mais três veículos para serem inseridos na lista. Para inserir na lista correta, peça também para o usuário identificar o tipo de veículo que deseja inserir, se é SUV, Sedan ou Hatch.
+    Peça para o usuário informar mais três veículos para serem inseridos na lista. 
+    Para inserir na lista correta, peça também para o usuário identificar o tipo de veículo que deseja inserir, se é SUV, Sedan ou Hatch.
 
     Apresente a lista final de cada tipo de veículo.
     */
 
     //ENTRADA
+    const carroUm = prompt(`Informe um veículo.`);
+    const tipoUm = Number(prompt(`Informe o tipo desse veículo. (1-SUV, 2-Sedan ou 3-Hatch)`));
+
+    const carroDois = prompt(`Informe um veículo.`);
+    const tipoDois = Number(prompt(`Informe o tipo desse veículo. (1-SUV, 2-Sedan ou 3-Hatch)`));
+
+    const carroTres = prompt(`Informe um veículo.`);
+    const tipoTres = Number(prompt(`Informe o tipo desse veículo. (1-SUV, 2-Sedan ou 3-Hatch)`));
+
+
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let carrosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    let carrosHatch = ["308", "Focus", "i30"];
 
 
     //PROCESSAMENTO
 
 
+    if (tipoUm === 1)
+        carrosSUV.push(carroUm);
+    else if (tipoUm === 2)
+        carrosSedan.push(carroUm);
+    else if (tipoUm === 3)
+        carrosHatch.push(carroUm);
+        else 
+    alert(`Erro no tipo do primeiro veículo! Informe o tipo do veículo conforme listado. (1-SUV, 2-Sedan ou 3-Hatch)`);
+
+
+
+    if (tipoDois === 1)
+        carrosSUV.push(carroDois);
+    else if (tipoDois === 2)
+        carrosSedan.push(carroDois);
+    else if (tipoDois === 3)
+        carrosHatch.push(carroDois);
+        else 
+    alert(`Erro no tipo do segundo veículo! Informe o tipo do veículo conforme listado. (1-SUV, 2-Sedan ou 3-Hatch)`);
+
+
+    if (tipoTres === 1)
+        carrosSUV.push(carroTres);
+    else if (tipoTres === 2)
+        carrosSedan.push(carroTres);
+    else if (tipoTres === 3)
+        carrosHatch.push(carroTres);
+    else 
+    alert(`Erro no tipo do terceiro veículo! Informe o tipo do veículo conforme listado. (1-SUV, 2-Sedan ou 3-Hatch)`);
+
     //SAÍDA
+
+    alert(`A lista final de  cada tipo de veículo, com a atualização, é:
+          SUVs: ${carrosSUV.join("; ")}
+          Sedan: ${carrosSedan.join("; ")}
+          Hatch: ${carrosHatch.join("; ")}`)
 
 </script>

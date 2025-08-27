@@ -7,11 +7,31 @@
     */
 
     //ENTRADA
+    const numUm = Number(prompt(`Informe um número:`));
+    const numDois = Number(prompt(`Informe um segundo número:`));
 
+    const crescente = [];
 
     //PROCESSAMENTO
-
-
+    
+    if (numUm < numDois) {
+        crescente.push(numUm);
+        crescente.push(numDois);
+    }
+    else if (numDois < numUm) {
+        crescente.push(numDois);
+        crescente.push(numUm);
+    }
+    else if (numUm === numDois) {
+        crescente.push(numUm);
+        crescente.push(numDois);
+        }
+        else {
+            alert(`Informe apenas com números.`);
+        }
     //SAÍDA
+
+    const resul = crescente.join("; ");
+    alert(`A ordem crescente dos números é: ${resul}`)
 
 </script>

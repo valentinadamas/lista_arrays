@@ -9,22 +9,14 @@
     */
 
     //ENTRADA
-    const carro = prompt(`Qual carro você deseja adicionar na lista("Creta", "Tracker", "Compass", "Kicks")?`).trim().toLowerCase();
     let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let listaAntiga = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    const carro = prompt(`Qual carro você deseja adicionar na lista de SUVs: ${carrosSUV.join(", ")}?`).trim().toLowerCase();
 
     //PROCESSAMENTO
-    if (carro === "kicks")
-    carrosSUV.push("Kicks");
-    else if (carro === "creta")
-    carrosSUV.push("Creta");
-    else if (carro === "tracker")
-    carrosSUV.push("Tracker");
-    else if (carro === "compass")
-    carrosSUV.push("Compass");
-    else
-    alert(`Insira um dos carros listados.`)
+    carrosSUV.push(carro);
 
     //SAÍDA
 
-    alert(`A lista antiga era: Tiggo, Sportage, Tucson, EcoSport. A lista com o item que você adicionou ficou: ${carrosSUV.join(", ")}`)
+    alert(`A lista antiga era: ${listaAntiga.join(", ")}. A lista com o item que você adicionou ficou: ${carrosSUV.join(", ")}`)
 </script>

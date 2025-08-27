@@ -7,11 +7,18 @@
     */
 
     //ENTRADA
+    const num1 = Number(prompt(`Informe um número:`));
+    const num2 = Number(prompt(`Informe um número:`));
+    const num3 = Number(prompt(`Informe um número:`));
+    const decrescente = [num1, num2, num3];
 
 
     //PROCESSAMENTO
 
+    decrescente.sort((a,b) => b-a);
 
     //SAÍDA
+
+    alert(`A ordem decrescente dos números: ${decrescente.join("; ")}`);
 
 </script>
